@@ -1,0 +1,11 @@
+<h1>Nice flats to rent !</h1>
+<ul>
+    <% @flats.each do |flat| %>
+        <li>
+            <%= flat['name'] %>
+            <%= link_to flat['id'], flat_path(flat['id']) %>
+            <%= flat['price'] %>
+            <%= flat['priceCurrency'] %>
+        </li> 
+    <% end %>
+</ul>
